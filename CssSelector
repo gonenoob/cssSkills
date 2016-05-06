@@ -1,0 +1,82 @@
+1. 属性选择器
+[attr=value]
+该属性有指定的确切的值。
+[attr~=value]
+该属性的值必须是一系列用空格隔开的多个值，(比如，class=”title featured home”)，而且这些值中的一个必须是指定的值”value”。
+[attr|=value]
+属性的值就是“value”或者以“value”开始并立即跟上一个“-”字符，也就是“value-”。(比如lang=”zh-cn”)
+[attr^=value]
+该属性的值以指定值开始。
+[attr$=value]
+该属性的值包含指定的值(而无论其位置)。
+[attr*=value]
+该属性的值以指定的值结束
+
+2. 子选择器
+>
+
+3. 兄弟组合
+临近兄弟组合 +
+普通兄弟组合 ~
+
+4. 伪类
+动态伪类
+有两类动态伪类：链接 和用户行为。链接就是:link 和:visited，而用户行为包括:hover、:active 和:focus。
+
+:first-child伪类允许你定位某个元素第一个子元素
+
+5. CSS 3 伪类
+:target
+
+UI元素状态伪类
+有些HTML元素有enable 或disabled 状态(比如，文本输入框)和 checked 或unchecked 状态(单选按钮和复选框)。
+这些状态就可以使用:enabled、:disabled 或:checked 伪类来分别定位。
+
+6. CSS 3 结构伪类
+:nth-child
+:nth-child()伪类允许你定位某个父级元素的一个或多个特定的子元素.
+
+:nth-last-child
+:nth-last-child伪类基本上和:nth-child伪类的作用相同，但是它从最后一个元素开始算。
+
+:nth-of-type
+:nth-of-type伪类和:nth-child也很像，不同的是它只计算选择器中指定的那个元素。
+
+:nth-last-of-type
+:nth-last-of-type 伪类可以像前面提到的:nth-last-child一样使用，但是这次，它将只匹配你在选择器中指定的元素类型
+
+:last-child
+:last-child伪类的作用类似于:first-child 伪类，但是会定位父级元素的最后一个子元素。
+
+:first-of-type 和:last-of-type
+:first-of-type 伪类用于定位一个父级元素下的第一个同类子元素。
+
+:only-child
+:only-child伪类表示一个元素是它的父级元素的唯一一个子元素。
+
+:only-of-type
+:only-of-type伪类表示一个元素是它的父级元素的唯一一个相同类型的子元素。
+
+:empty
+:empty伪类表示一个元素里面没有任何内容。
+
+7. 否定选择器
+否定选择器:not()，可以让你定位不匹配该选择器的元素
+
+8. 伪元素
+伪元素允许你操作HTML中不是真实存在的元素，比如一个文本块的第一行或者第一个字母。
+
+::first-line
+::first-line伪元素将匹配block、inline-block、table-caption、table-cell等等级别元素的第一行
+这对在你的文字块上添加一些微妙的排版细节相当有用
+
+::first-letter
+::first-letter伪元素将会匹配一个文本块的第一个字母，除非在同一行里面包含一些其它元素，比如图片。
+和::first-line伪类一样，::first-letter通常用于给文本元素添加排版细节，比如下沉字母或首字母。
+
+::before 和 ::after
+::before和::after 伪元素用于在一个元素的前面或后面插入内容，纯CSS方法。
+这些元素将继承它们将附加的元素的大部分属性。
+
+::first-line 和::first-letter 伪元素可以匹配使用::before伪元素生成的内容
+
