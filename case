@@ -82,4 +82,3 @@ a[href^="http"]:empty::before {
    color: transparent;
    text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
-
