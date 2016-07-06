@@ -1,0 +1,32 @@
+
+块级元素
+    块级元素是那些视觉上会被格式化成块状的元素，通俗一点来说就是那些会换新行的元素。
+    display 属性的：block, list-item, table, flex, grid 值都可以将一个元素设置成块级元素。
+
+块元素
+    块元素是 display 属性值为 block 的元素，它应该是 块级元素 的一个子集，
+    而不是等同的，一个 块元素 是一个 块级元素，但一个 块级元素 不一定是一个 块元素，所以不要混淆。
+
+行内级元素
+    行内级元素是那些不会为自身内容形成新的块，而让内容分布在多行中的元素。
+    display 属性的：inline, inline-table, inline-block, inline-flex, inline-grid 值都可以将一个元素设置成行内级元素。
+
+行内元素
+    如同块元素之于块级元素的关系，行内元素仅仅是 display 属性值为 inline 的元素。
+    b, big, i, small, tt
+    abbr, acronym, cite, code, dfn, em, kbd, strong, samp, var
+    a, bdo, br, img, map, object, q, script, span, sub, sup
+    button, input, label, select, textarea
+    
+行内元素 能够定义宽度和高度吗？
+
+    行内级置换元素可以设置宽高，如img,input,textarea,button
+    
+一个 内容 不受CSS视觉格式化模型控制，CSS渲染模型并不考虑对此内容的渲染，
+且元素本身一般拥有固有尺寸（宽度，高度，宽高比）的元素，被称之为置换元素。
+对于行内级置换元素来说，其高度的设置需遵循以下几点：
+    若宽高的计算值都为 auto 且元素有固有高度，则 height 的使用值为该固有高度；
+    若高度的计算值为 auto 且元素有固有高度，则 height 的使用值为该固有高度；
+    若高度的计算值为 auto 且宽度有 非auto 的计算值，并且元素有固有宽高比，则height 的使用值为：宽度使用值 / 固有宽高比；
+    若高度的计算值为 auto 且上述条件完全不符，则 height 的使用值 不能大于150px，且宽度不能大于长方形高度的2倍。
+
